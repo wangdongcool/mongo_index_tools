@@ -80,10 +80,10 @@ def main(options):
             ns = db + '.' + collection_name
             all_index_stats[ns] = index_stats
 
-    x = PrettyTable(["Collection", "Index Name", "Access"])
+    x = PrettyTable(["Collection", "Index Name", "Access Times"])
     x.align["Collection"]  = "l"
     x.align["Index Name"]  = "l"
-    x.align["Access"]  = "l"
+    x.align["Access Times"]  = "l"
     x.padding_width = 1
 
     for ns in all_index_stats:
