@@ -28,6 +28,7 @@ Options:
 
 for example:
 python mongo_index_access.py --host=localhost --user=username --password='123456' --port=27017  --database=py_grepwang
+
 +-----------------------+--------------+--------+
 | Collection            | Index Name   | Access |
 +-----------------------+--------------+--------+
