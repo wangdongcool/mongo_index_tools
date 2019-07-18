@@ -16,12 +16,17 @@ frequently.
 
 Options:
   -h, --help            show this help message and exit
+  
   -H HOST, --host=HOST  MongoDB host
+  
   -p PORT, --port=PORT  MongoDB port
+  
   -d DATABASE, --database=DATABASE
                         Target database to generate statistics. All if
                         omitted.
+                        
   -u USER, --user=USER  Admin username if authentication is enabled
+  
   --password=PASSWORD   Admin password if authentication is enabled
   
   If any problem, you can contact the author, send email to 986499346@qq.com
