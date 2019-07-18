@@ -36,4 +36,4 @@ for example:
 
 python mongo_index_access.py --host=localhost --user=username --password='123456' --port=27017 --database=order
 
-If any problem, you can contact the author, send email to 986499346@qq.com
+If any problem, you can contact the author, send email to 986499346@qq.com.
