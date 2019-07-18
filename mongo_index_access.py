@@ -10,7 +10,6 @@ Notice:
 3. The statistics reported by the accesses field only includes index access driven by user requests. It does not include internal operations like deletion via TTL Indexes or chunk split and migration operations.
 """
 import sys
-import psutil
 from prettytable import PrettyTable
 from pymongo import MongoClient
 from optparse import OptionParser
