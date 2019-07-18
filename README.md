@@ -31,15 +31,6 @@ Options:
   
 for example:
 
-python mongo_index_access.py --host=localhost --user=username --password='123456' --port=27017
-
-+---------------------------------------+-----------------------------------------------------------------------------------+--------------+----------------------------+
-| Collection                            | Index Name                                                                        | Access Times | Since Time                 |
-+---------------------------------------+-----------------------------------------------------------------------------------+--------------+----------------------------+
-| carVehicle.baseCarInfo                | _modified                                                                         | 0            | 2019-02-26 08:48:35.437000 |
-| carVehicle.blockListData              | openid_1                                                                          | 0            | 2018-08-31 02:15:24.144000 |
-| carVehicle.carInfo                    | vin_1                                                                             | 0            | 2019-02-13 06:58:12.335000 |
-| carVehicle.carUserBase                | credentialNo_1_vin_1                                                              | 0            | 2018-03-21 13:41:03.953000 |
-| carVehicle.cddSearchRule              | byPrefix                                                                          | 0            | 2019-06-12 08:57:35.221000 |
+python mongo_index_access.py --host=localhost --user=username --password='123456' --port=27017 --database=order
 
 If any problem, you can contact the author, send email to 986499346@qq.com
