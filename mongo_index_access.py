@@ -56,7 +56,7 @@ def get_client(host, port, username, password):
 
 # Get index stat info
 def get_index_stats(database, collection):
-    pipeline = [{"$indexStats":{ }},{"$project":{"name":1,"accesses.ops":1}}]
+    pipeline = [{"$indexStats":{ }},{"$project":{"name":1,"accesses.ops":1,"accesses.since":1}}]
     index_stats = database.command('aggregate', collection, pipeline=pipeline, explain=False)
     return index_stats['result']
 
@@ -80,10 +80,11 @@ def main(options):
             ns = db + '.' + collection_name
             all_index_stats[ns] = index_stats
 
-    x = PrettyTable(["Collection", "Index Name", "Access Times"])
+    x = PrettyTable(["Collection", "Index Name", "Access Times", "Since Time"])
     x.align["Collection"]  = "l"
     x.align["Index Name"]  = "l"
     x.align["Access Times"]  = "l"
+    x.align["Since Time"]  = "l"
     x.padding_width = 1
 
     for ns in all_index_stats:
@@ -91,7 +92,7 @@ def main(options):
         for index_stat in index_stats:
             if index_stat["name"] != '_id_' and int(index_stat["accesses"]["ops"]) == 0:
                 index_name = index_stat["name"].split(',')[0]
-                x.add_row([ns,index_name,int(index_stat["accesses"]["ops"])])
+                x.add_row([ns,index_name,int(index_stat["accesses"]["ops"]),index_stat["accesses"]["since"]])
     print x.get_string(sortby="Collection")
 
 if __name__ == "__main__":
