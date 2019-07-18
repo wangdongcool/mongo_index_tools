@@ -9,7 +9,7 @@ Notice:
 
 author:wangdongdong, author product environment: python 2.7.5
 
-you can download it directory,before use it, You must install it relies on modules，execute pip install psutil/prettytable/pymongo/optparse
+you can download it directory,before use it, You must install it relies on modules，execute pip install prettytable/pymongo/optparse
 
 Usage: python mongo_index_access.py [options]
 
