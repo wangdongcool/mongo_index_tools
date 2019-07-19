@@ -92,7 +92,7 @@ def main(options):
             if index_stat["name"] != '_id_' and int(index_stat["accesses"]["ops"]) == 0:
                 index_name = index_stat["name"].split(',')[0]
                 x.add_row([ns,index_name,int(index_stat["accesses"]["ops"]),index_stat["accesses"]["since"]])
-    print x.get_string(sortby="Collection")
+    print(x.get_string(sortby="Collection"))
 
 if __name__ == "__main__":
     options = get_cli_options()
