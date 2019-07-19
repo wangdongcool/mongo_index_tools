@@ -13,9 +13,6 @@ you can download it directory,before use it, You must install it relies on modul
 
 Usage: python mongo_index_access.py [options]
 
-This script prints some basic index info about collection whether to use
-frequently.
-
 Options:
 
   -h, --help            show this help message and exit
